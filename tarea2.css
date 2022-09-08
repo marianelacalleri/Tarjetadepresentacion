@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+
+:root {
+    --colorone: #334f64;
+    --colortwo: #46a8a7;
+    --colorthree: #ffd782;
+    --colorfour: #eaebed; 
+    --fontTitle: 'Dancing Script', cursive;
+    --fontOther: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(0deg, var(--colorone), var(--colortwo) );
+    /* background: linear-gradient(0deg, #ffd6b2, #31acba); */
+ }
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px;
+    transition: 0.5s;
+}
+
+.card:hover {
+    height: 450px;
+}
+
+.imgBox {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: azure;
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transition: 0.55s;
+}
+
+.card:hover .imgBox {
+    height: 250px;
+    width: 250px;
+}
+
+.imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+h2 {
+    font-family: var(--fontTitle);
+    font-size: xx-large;
+    padding-bottom: 20px;
+    color: var(--colorone);
+}
+
+p {
+    font-family: var(--fontOther);
+    font-size: small;
+    opacity: 0.5;
+    padding-bottom: 10px;
+}
+
+h3, a {
+    font-family: var(--fontOther);
+    font-size:small;
+    opacity: 0.75;
+}
+
+a {
+    text-decoration: none;
+    color: var(--colorone);
+}
+
+a .button {
+    
+    background-color: var(--colorone);
+    
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+
+
+.card .content .name {
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.55s;
+    transform: translateY(180px);
+    
+}
+
+.card:hover .content  .name {
+    transform: translateY(0px);
+}
+
+.card .content .name h3 {
+    font-size: 0.75em;
+
+}
+
+.card .cta-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card .cta-buttons .button {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--colorfour);
+    transition: 0.5s;
+}
+
+
+.card .cta-buttons .button:hover {
+    background-color: #31acba;
+    color: var(--colorthree);
+}
+
